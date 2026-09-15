@@ -33,8 +33,8 @@ export const auth = betterAuth({
 
   advanced: {
     defaultCookieAttributes: {
-      secure: false,
-      sameSite: "lax",
+      secure: true,
+      sameSite: 'none',
     },
   },
 
@@ -50,11 +50,10 @@ export const auth = betterAuth({
     },
   },
 
-   account: {
+  account: {
     accountLinking: {
       enabled: true,
-      trustedProviders: ["google", "github"],
+      trustedProviders: ['google', 'github'],
     },
   },
-
 });
