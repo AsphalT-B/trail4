@@ -19,7 +19,7 @@ export function CommentList({
             {comments.map((comment) => (
                 <li key={comment.id} className="flex items-start gap-3">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-medium text-white">
-                        {comment.userName.charAt(0)}
+                        {comment.userName}
                     </div>
                     <div className="flex-1">
                         <div className="flex items-center justify-between">
