@@ -8,6 +8,7 @@ import { VidpostModule } from './vidpost/vidpost.module.js';
 import { PrismaService } from './prisma/prisma.service.js';
 import { PrismaModule } from './prisma/prisma.module.js';
 import { CommentsModule } from './comments/comments.module.js';
+import { UploadModule } from './upload/upload.module.js';
 
 @Module({
   imports: [
@@ -24,6 +25,8 @@ import { CommentsModule } from './comments/comments.module.js';
       PrismaModule,
 
       CommentsModule,
+
+      UploadModule,
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],
