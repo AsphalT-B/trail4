@@ -10,21 +10,21 @@ export class VidpostController {
 
   @Post('create')
   @Roles(['ADMIN'])
-  create(@Body() createVidpostDto: CreateVidpostDto, @Req() req: any,) {
+  create(@Body() createVidpostDto: CreateVidpostDto, @Req() req: any) {
     console.log(req.user);
     const userId = req.user.id;
     return this.vidpostService.create(createVidpostDto, userId);
   }
 
   @AllowAnonymous()
-  @Get("all-vidoes")
+  @Get('all-post')
   findAll() {
     return this.vidpostService.findAll();
   }
 
   @AllowAnonymous()
-  @Get("recent-post")
-  findRecent(){
+  @Get('recent-post')
+  findRecent() {
     return this.vidpostService.findRecent();
   }
 
