@@ -30,7 +30,7 @@ export default function AdminPage() {
         );
     }
 
-    if (user.role !== "admin") {
+    if (user.role !== "ADMIN") {
         return (
             <>
                 <Navbar />

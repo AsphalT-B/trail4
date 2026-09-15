@@ -27,7 +27,7 @@ export function Navbar() {
                     {user ? (
                         <>
                             <Link href="/dashboard" className="text-ink hover:text-brass">My learning</Link>
-                            {user.role === "admin" && (
+                            {user.role === "ADMIN" && (
                                 <Link href="/admin" className="text-ink hover:text-brass">Admin</Link>
                             )}
                             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-xs font-medium text-paper">
