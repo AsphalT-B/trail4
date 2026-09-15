@@ -23,7 +23,7 @@ export class VidpostController {
   }
 
   @AllowAnonymous()
-  @Get("recent-posts")
+  @Get("recent-post")
   findRecent(){
     return this.vidpostService.findRecent();
   }
