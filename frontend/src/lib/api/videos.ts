@@ -27,11 +27,12 @@ export async function fetchRecentVideos(): Promise<Video[]> {
     return handleResponse<Video[]>(res);
 }
 
-export async function fetchVideoById(id: string): Promise<Video | undefined> {
-    // No single-post GET was provided — filtering all-post client-side.
-    // Fine for 6 videos; ask for a real GET /vidpost/:id if this catalog grows.
-    const all = await fetchAllVideos();
-    return all.find((v) => v.id === id);
+export async function fetchVideoById(id: string): Promise<Video> {
+  const res = await fetch(`${API_URL}/vidpost/${id}`, {
+    credentials: "include",
+  });
+
+  return handleResponse<Video>(res);
 }
 
 export async function createVideo(input: VideoInput): Promise<Video> {
