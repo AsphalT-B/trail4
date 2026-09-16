@@ -24,6 +24,7 @@ export function Navbar() {
 
                 <nav className="ml-auto hidden items-center gap-6 text-sm md:flex">
                     <Link href="/courses" className="text-ink hover:text-brass">Courses</Link>
+                    <Link href="/blog" className="hover:text-primary">Blog</Link>
                     {user ? (
                         <>
                             <Link href="/dashboard" className="text-ink hover:text-brass">My learning</Link>

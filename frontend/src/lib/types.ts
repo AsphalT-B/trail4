@@ -27,3 +27,13 @@ export interface WatchHistoryEntry {
   videoId: string;
   watchedAt: string;
 }
+
+export interface Blog {
+  id: string;
+  title: string;
+  description: string;
+  content: string; // HTML string produced by the rich text editor
+  userId: string;
+  createdAt: string;
+  updatedAt: string;
+}
