@@ -34,7 +34,7 @@ export default function AdminBlogPage() {
                 <Navbar />
                 <div className="mx-auto max-w-md px-4 py-20 text-center">
                     <h1 className="font-display text-xl font-bold text-ink">Admins only</h1>
-                    <p className="mt-2 text-slate">Your account doesn&apos;t have access to this page.</p>
+                    <p className="mt-2 text-slate">Your account doesn't have access to this page.</p>
                 </div>
                 <Footer />
             </>
@@ -61,7 +61,7 @@ export default function AdminBlogPage() {
                     </Link>
                 </div>
                 {isLoading && <p className="text-sm text-slate">Loading posts…</p>}
-                {isError && <p className="text-sm text-red-600">Couldn&apos;t load posts.</p>}
+                {isError && <p className="text-sm text-red-600">Couldn't load posts.</p>}
                 {blogs && <AdminBlogTable blogs={blogs} />}
             </main>
             <Footer />
