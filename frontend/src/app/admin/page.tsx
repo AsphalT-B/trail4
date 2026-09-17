@@ -4,11 +4,11 @@ import Link from "next/link";
 import { Plus } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { AdminTabs } from "@/components/admin/admin-tabs";
 import { AdminVideoTable } from "@/components/admin/admin-video-table";
 import { useAllVideos } from "@/lib/hooks/use-video";
 import { useCurrentUser } from "@/lib/hooks/use-current-user";
 import { useAuthModal } from "@/lib/context/auth-modal-context";
-import { AdminTabs } from "@/components/admin/admin-tabs";
 
 export default function AdminPage() {
     const { data: videos, isLoading, isError } = useAllVideos();
@@ -19,7 +19,6 @@ export default function AdminPage() {
         return (
             <>
                 <Navbar />
-                <AdminTabs active="videos" />
                 <div className="mx-auto max-w-md px-4 py-20 text-center">
                     <h1 className="font-display text-xl font-bold text-ink">You need to be logged in</h1>
                     <p className="mt-2 text-slate">Log in to access the admin panel.</p>
@@ -52,7 +51,8 @@ export default function AdminPage() {
         <>
             <Navbar />
             <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-                <div className="mb-8 flex items-center justify-between border-b border-line pb-8">
+                <AdminTabs active="videos" />
+                <div className="mb-8 mt-6 flex items-center justify-between">
                     <div className="flex items-center gap-4">
                         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-xl font-semibold text-white">
                             {user.name.charAt(0).toUpperCase()}
