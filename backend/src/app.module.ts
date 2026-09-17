@@ -9,6 +9,7 @@ import { PrismaService } from './prisma/prisma.service.js';
 import { PrismaModule } from './prisma/prisma.module.js';
 import { CommentsModule } from './comments/comments.module.js';
 import { UploadModule } from './upload/upload.module.js';
+import {BlogModule} from './blog/blog.module.js'
 
 @Module({
   imports: [
@@ -20,13 +21,15 @@ import { UploadModule } from './upload/upload.module.js';
       auth,
     }),
 
-      VidpostModule,
+    VidpostModule,
 
-      PrismaModule,
+    PrismaModule,
 
-      CommentsModule,
+    CommentsModule,
 
-      UploadModule,
+    UploadModule,
+
+    BlogModule,
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],
