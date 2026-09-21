@@ -13,7 +13,7 @@ export default function BlogListPage() {
             <Navbar />
             <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
                 <h1 className="font-display text-3xl font-bold text-ink">Articles</h1>
-                <p className="mt-2 text-slate">Written tutorials from the SkillStream team.</p>
+                <p className="mt-2 text-slate">Written tutorials from the EduNovia team.</p>
                 <div className="mt-10">
                     {isLoading && <p className="text-sm text-slate">Loading…</p>}
                     {isError && <p className="text-sm text-red-600">Couldn't load articles.</p>}
